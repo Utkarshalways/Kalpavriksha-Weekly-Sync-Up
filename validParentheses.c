@@ -68,9 +68,8 @@ void printMap(Hashmap* map) {
     for (int i = 0; i < SIZE_TABLE; i++) {
         Node* curr = map->table[i];
         if (curr != NULL) {
-            printf("Index %d: ", i);
             while (curr != NULL) {
-                printf("(%c, %d) -> ", curr->ch, curr->count);
+                printf("%c -> %d\n", curr->ch, curr->count);
                 curr = curr->next;
             }
             printf("NULL\n");
